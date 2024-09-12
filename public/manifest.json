@@ -1,0 +1,20 @@
+{
+  "short_name": "React Firebase App",
+  "name": "Create React Firebase App Sample",
+  "icons": [
+    {
+      "src": "niveus-logo.png",
+      "type": "image/png",
+      "sizes": "158x30"
+    },
+    {
+      "src": "nivFavicon.png",
+      "type": "image/png",
+      "sizes": "16x16"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

@@ -1,0 +1,25 @@
+.container {
+    padding: 20px;
+  }
+  
+  .uploadButton {
+    margin-top: 20px;
+  }
+  
+  .imageCard {
+    margin-top: 20px;
+  }
+  
+  .image {
+    margin-top: 10px;
+    max-width: 100%;
+  }
+  
+  .deleteButton {
+    margin: 10px;
+  }
+  
+  .cardGrid {
+    margin-top: 40px;
+  }
+  

@@ -1,0 +1,48 @@
+.TaskComponent {
+    display: grid;
+    place-items: center;
+}
+ul{
+    width: 100%;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    padding: 0%;
+}
+
+.todo__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    border: 1px solid lightgray;
+    margin-bottom: 10px !important;
+}
+
+.app-bar {
+    background-color: #3f51b5;
+    /* Custom color for the AppBar */
+}
+
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.app-title {
+    font-weight: bold;
+}
+
+.nav-button {
+    margin: 0 10px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Light hover effect */
+}
+
+.account-icon {
+    margin-left: 20px;
+}
