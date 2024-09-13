@@ -46,9 +46,9 @@ const Header = () => {
           Home
         </Button>
        
-        {/* <Button color="inherit" onClick={() => navigateTo('/todoPage')} className="nav-button">
+         {/* <Button color="inherit" onClick={() => navigateTo('/todoPage')} className="nav-button">
           Todo
-        </Button> */}
+        </Button>  */}
         <Button color="inherit" onClick={() => navigateTo('/uploadPage')} className="nav-button">
         Photo Gallery        
         </Button>

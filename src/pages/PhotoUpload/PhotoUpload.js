@@ -24,7 +24,7 @@ const PhotoUpload = () => {
   const handleUpload = () => {
     if (!image) return;
 
-    const storageRef = ref(firebaseStorage, `trail/${image.name}`);
+    const storageRef = ref(firebaseStorage, `photogallery/${image.name}`);
 
     // Start uploading
     uploadBytes(storageRef, image).then((snapshot) => {
@@ -41,7 +41,7 @@ const PhotoUpload = () => {
 
   // Delete uploaded image from Firebase Storage
   const handleDelete = (fileName) => {
-    const storageRef = ref(firebaseStorage, `trail/${fileName}`);
+    const storageRef = ref(firebaseStorage, `photogallery/${fileName}`);
     deleteObject(storageRef).then(() => {
       console.log('File deleted successfully');
       fetchImages(); // Refresh the list of images
@@ -52,7 +52,7 @@ const PhotoUpload = () => {
 
   // Fetch all images from Firebase Storage
   const fetchImages = () => {
-    const listRef = ref(firebaseStorage, 'trail/');
+    const listRef = ref(firebaseStorage, 'photogallery/');
     listAll(listRef).then((res) => {
       const promises = res.items.map((itemRef) => getDownloadURL(itemRef));
       Promise.all(promises).then((urls) => {
