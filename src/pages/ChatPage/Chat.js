@@ -11,25 +11,25 @@ const ChatApp = () => {
   const { currentUser } = useAuth();
 
   useEffect(() => {
-    // const messagesRef = ref(firebaseRealTimeDb, "messages");
-    // const unsubscribe = onValue(messagesRef, (snapshot) => {
-    //   const messageData = snapshot.val();
-    //   if (messageData) {
-    //     const messageList = Object.keys(messageData).map((key) => ({
-    //       ...messageData[key],
-    //       id: key,
-    //     }));
-    //     setMessages(messageList);
-    //   }
-    // });
+    const messagesRef = ref(firebaseRealTimeDb, "messages");
+    const unsubscribe = onValue(messagesRef, (snapshot) => {
+      const messageData = snapshot.val();
+      if (messageData) {
+        const messageList = Object.keys(messageData).map((key) => ({
+          ...messageData[key],
+          id: key,
+        }));
+        setMessages(messageList);
+      }
+    });
 
-    // return () => unsubscribe();
+    return () => unsubscribe();
   }, []);
 
   const handleMessageSubmit = (event) => {
     event.preventDefault();
 
-    // const messageRef = ref(firebaseRealTimeDb, "messages");
+    const messageRef = ref(firebaseRealTimeDb, "messages");
     const newMessage = messageInputRef.current.value;
 
     if (newMessage.trim() === "") return;
@@ -40,7 +40,7 @@ const ChatApp = () => {
       email: currentUser.email,
       name: currentUser.displayName ? currentUser.displayName : (currentUser.email ? currentUser.email.split('@')[0]:'User'),
     };
-    // push(messageRef, message);
+    push(messageRef, message);
     messageInputRef.current.value = "";
   };
 
