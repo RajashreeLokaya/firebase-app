@@ -7,13 +7,8 @@ import ChatApp from "../pages/ChatPage/Chat";
 import AppLayout from "../components/AppLayout";
 import PhotoUpload from "../pages/PhotoUpload/PhotoUpload";
 import TaskComponent from "../pages/ToDoPage/ToDoPage";
-// import Welome from "../pages/Welcome/Welome";
 
 export const router = createBrowserRouter([
-  // {
-  //   path: "/",
-  //   element: <Welome />,
-  // },
   {
     path: "/",
     element: <Login />,
